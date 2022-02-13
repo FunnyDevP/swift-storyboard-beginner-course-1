@@ -12,7 +12,7 @@ struct FortuneData {
     var message: String
 }
 class ViewController: UIViewController, UITableViewDataSource {
-
+    
     var fortunes: [FortuneData] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         textView.becomeFirstResponder()
         
         tableView.dataSource = self
-        
+        fortuneBT.isEnabled = false
         
         
     }
@@ -32,6 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     // MARK: - Outlet
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var fortuneBT: UIButton!
     
     // MARK: - Action
     @IBAction func addNewFortuneBT(_ sender: Any) {
@@ -45,6 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
         textView.text = ""
+        fortuneBT.isEnabled = true
     }
     @IBAction func fortuneBT(_ sender: Any) {
         var randomFortune = ""

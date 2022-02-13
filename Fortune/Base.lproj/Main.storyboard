@@ -67,6 +67,9 @@
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Fortune"/>
+                                <connections>
+                                    <action selector="fortuneBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vaf-T0-Lg0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -87,7 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="3tz-uf-cLm"/>
                     <connections>
-                        <outlet property="fortuneBT" destination="r3j-JL-g3N" id="yhq-B8-kyO"/>
+                        <outlet property="fortuneBT" destination="r3j-JL-g3N" id="Iwe-Gq-Rji"/>
                         <outlet property="tableView" destination="khe-1d-Iyc" id="L7m-fj-T9f"/>
                         <outlet property="textView" destination="BxJ-V4-lbA" id="TAW-Zh-Chx"/>
                     </connections>
